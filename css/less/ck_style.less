@@ -1,0 +1,167 @@
+
+
+/******  colors **********/
+@background: #e5e6e8;
+@greyText: #666666;
+@lightText: #990066;
+@darkText: #330033;
+@blueText: #0099ff;
+@magentaText: #990066;
+@orangeText: #ff9900;
+@purpleText: #330033;
+@navyText: #000033;
+@blackText: #000000;
+
+
+/********* fonts **************/
+
+@georgiaFont: Georgia,'Times New Roman',serif;
+@regFont: Arial,Helvetica,sans-serif;
+@bigText: 1.7em;
+@medText: 1.3em;
+@smallText: 0.9em;
+
+/********* widths / margins **************/
+@contentWidth: 1000px;
+@marginLeft: 5px;
+@projectHeight:150px;
+
+
+body { 
+font-family:Arial, Helvetica, sans-serif;
+text-align: center;
+background:@background;
+}
+
+#wrapper {
+width: @contentWidth;
+margin: 0 auto;	
+text-align: left;
+}
+
+header {
+  font: @georgiaFont;
+  .borders;
+  padding: 0 0 0 @marginLeft;
+  margin:10px 0 0 0;
+}
+
+
+/********** first page styles ***********/
+
+#names {
+	font-size:@bigText;
+	font-family: @georgiaFont;
+	margin:10px 0 0 0;
+	font-style:italic;
+}
+
+#main_nav {
+	font-size:@medText;
+	font-family: @georgiaFont;
+	margin:3px 0 0 0;
+	font-style:italic;
+}
+
+#main_nav a {
+	color:@magentaText;
+	text-decoration:none;
+}
+
+#sub_nav {
+	font-size:@smallText;
+	font-family: @georgiaFont;
+	font-style:italic;
+	margin:3px 0 12px 0;
+}
+
+.borders(@color:#000) {
+	border-top: solid 7px @color;
+	border-bottom: solid 20px @color;
+}
+
+.project {
+ display:inline-block;	
+ margin:10px 0 0 10px;
+}
+
+#project1 .numberBox, #project1 .logoBox {
+ .borders(@blueText);
+ color:@blueText;
+}
+#project2 .numberBox, #project2 .logoBox {
+ .borders(@magentaText);
+ color:@magentaText;
+}
+#project3 .numberBox, #project3 .logoBox {
+ .borders(@orangeText);
+ color:@orangeText;
+}
+#project4 .numberBox, #project4 .logoBox {
+	.borders(@purpleText);
+	color:@purpleText;
+}
+#project5 .numberBox, #project5 .logoBox {
+ 	.borders(@blackText);
+	color:@blackText;
+}
+
+
+.numberBox {
+width:300px;
+height:@projectHeight;
+.borders;
+float:left;
+font-size:8em;
+font-family:@georgiaFont;
+font-style:italic;
+padding: 10px 0 0 40px;
+}
+
+.imageBox {
+width:500px;
+height:@projectHeight + 37;
+background:#FC0;
+float:right;
+}
+.logoBox {
+width:150px;
+height:@projectHeight;
+background:#FFF;
+.borders;
+float:right;
+padding: 10px 0 0 0;
+}
+
+#about {
+  background:#fff;	
+}
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+
+@the-border: 1px solid #000;
+@base-color: #696;
+@red:        #842210;
+
+
+
+#menu {
+  ul { font-size: 22px;
+  font-family:arial,helvetica,sans-serif;
+  list-style:none;
+    li { color:@lightText; 
+        
+	 a {text-decoration: none;
+	 color:white;
+	   background:#F00;
+      &:hover { color: #ffCC00; }
+	 }
+	}
+  }
+}
+
