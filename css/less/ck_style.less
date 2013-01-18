@@ -17,6 +17,8 @@
 
 @georgiaFont: Georgia,'Times New Roman',serif;
 @regFont: Arial,Helvetica,sans-serif;
+@headerText: 3.7em;
+@headerWeight:900;
 @bigText: 1.7em;
 @medText: 1.3em;
 @smallText: 0.9em;
@@ -68,6 +70,15 @@ header {
 	text-decoration:none;
 }
 
+h2{
+  color:@magentaText;
+  font-size:@bigText;
+  font-family: @georgiaFont;
+  font-style:italic;
+  text-transform:lowercase;
+  margin:0 0 3px 0;
+}
+
 #sub_nav {
 	font-size:@smallText;
 	font-family: @georgiaFont;
@@ -108,7 +119,7 @@ header {
 
 
 .numberBox {
-width:150px;
+width:170px;
 height:@projectHeight;
 .borders;
 float:left;
@@ -118,13 +129,21 @@ font-style:italic;
 padding: 10px 0 0 10px;
 }
 
+.numberBox div {
+  margin:50px 0 0 20px;
+}
+
+.logo {
+  margin:60px 0px 0px 90px;
+}
+
 .imageBox {
 width:494px;
 height:@projectHeight + 37;
 float:left;
 }
 .logoBox {
-width:280px;
+width:260px;
 height:@projectHeight;
 background:#FFF;
 .borders;
@@ -134,8 +153,31 @@ padding: 10px 0 0 0;
 
 #about {
   background:#fff;	
+  margin:5px 0 0 0;
+  padding:5px 0 0 0;
+  height:700px;
 }
 
+h1 {
+  font-size:@headerText;
+  font:@regFont;
+  font-weight:@headerWeight;
+  margin:-8px 0 0 20px;
+}
+
+p {
+  font:@regFont;
+  font-size:@smallText;
+  margin:10px 0 0 20px;
+  width:600px;
+  line-height:1.2em;
+}
+
+#about_photo {
+  background:#000;
+  margin: 10px 0 0 15px;  
+  padding:10px;
+}
 .rounded-corners (@radius: 5px) {
   border-radius: @radius;
   -webkit-border-radius: @radius;
@@ -143,24 +185,22 @@ padding: 10px 0 0 0;
 }
 
 
-@the-border: 1px solid #000;
-@base-color: #696;
-@red:        #842210;
+
+#bottom_links li{
+  float:left;
+  font-size: 0.8em;
+  font-family:@regFont;
+  text-transform:uppercase;
+  margin:45px 0 0 30px;
+  line-height:1.4em;
+}
 
 
-
-#menu {
-  ul { font-size: 22px;
-  font-family:arial,helvetica,sans-serif;
-  list-style:none;
-    li { color:@lightText; 
-        
-	 a {text-decoration: none;
-	 color:white;
-	   background:#F00;
-      &:hover { color: #ffCC00; }
-	 }
-	}
-  }
+footer {
+  height: 158px;
+  background:url("../../images/ck_footer.png");
+  width:@contentWidth;
+  border-bottom: solid 20px #333;
+  margin: -1px 0 20px 0;
 }
 
